@@ -1,0 +1,201 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+  --heading-font: "Poppins", sans-serif;
+  --body-fonts: "Open Sans", sans-serif;
+  --main-sectionSpaces: 60px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+body {
+  background-image: url("../images/bg-desktop.svg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: 50%;
+  background-color: var(--Violet);
+  font-family: var(--body-fonts);
+}
+
+header {
+  margin-bottom: var(--main-sectionSpaces);
+}
+header .container span svg {
+  width: 199px;
+  height: 125px;
+}
+@media (max-width: 576px) {
+  header .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+section.main-content .container {
+  display: flex;
+  justify-content: space-between;
+}
+section.main-content .container > * {
+  width: 45%;
+}
+section.main-content .container .img img {
+  width: 100%;
+}
+section.main-content .container .left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.main-content .container .left-content > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+section.main-content .container .left-content h3 {
+  color: white;
+  font-size: 2.4vw;
+  max-width: 464px;
+  font-family: var(--heading-font);
+  text-transform: capitalize;
+}
+@media (max-width: 576px) {
+  section.main-content .container .left-content h3 {
+    font-size: 18px;
+  }
+}
+section.main-content .container .left-content h3 + p {
+  color: #eee;
+  line-height: 1.9;
+  font-size: 18px;
+}
+section.main-content .container .left-content h3 + p + button {
+  cursor: pointer;
+  color: var(--Violet);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  padding: 10px 30px;
+  z-index: 2;
+  border: none;
+  font-size: 16px;
+  position: relative;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+section.main-content .container .left-content h3 + p + button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  background-color: #000;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+section.main-content .container .left-content h3 + p + button:hover {
+  color: white;
+}
+section.main-content .container .left-content h3 + p + button:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  section.main-content .container {
+    flex-direction: column;
+  }
+  section.main-content .container > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  section.main-content .container > * {
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: calc(30px + var(--main-sectionSpaces));
+}
+footer .container ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+@media (max-width: 576px) {
+  footer .container ul {
+    justify-content: center;
+  }
+}
+footer .container ul li {
+  border: 1px solid white;
+  padding: 10p;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 8px;
+}
+footer .container ul li .icon svg {
+  width: 18px;
+  height: 15px;
+  color: white;
+}/*# sourceMappingURL=main.css.map */
