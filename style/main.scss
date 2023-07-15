@@ -193,7 +193,7 @@ footer {
             display: flex;
             justify-content: flex-end;
             list-style: none;
-            @media (max-width: $sm) {
+            @media (max-width: $lg) {
                 & {
                     justify-content: center;
                 }
